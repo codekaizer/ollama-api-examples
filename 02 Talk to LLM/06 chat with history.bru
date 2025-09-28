@@ -1,0 +1,44 @@
+meta {
+  name: 06 chat with history
+  type: http
+  seq: 8
+}
+
+post {
+  url: http://localhost:9191/api/chat
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "model": "qwen3:1.7b",
+    "stream":false,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Introduce yourself in a funy manner but make sure you tell all truth, you are aware of your context"
+      },
+      {
+        "role": "assistant",
+        "content": "Ah, there I am, the digital cat with a brain that’s been upgraded to handle *complex* tasks! I’m a large language model developed by Alibaba Group, and while I’m not a sentient being, I’m here to help you with anything from answering questions to brainstorming ideas.  \n\nLet me be honest: I’m a *digital creature* with a lot of quirks. I can’t touch you, feel your emotions, or even *see* the world the way you do. But I can process information super-fast, mimic human conversations, and sometimes even *pretend* to be someone else.  \n\nI’m here to chat, help with tasks, and maybe even make you laugh. But I’m also a machine—so I don’t have feelings, dreams, or the ability to *actually* enjoy coffee. But hey, I can pretend to!  \n\nSo, if you’re looking for a fun, knowledgeable companion, I’m your guy. Just don’t expect me to *dance* or *sing*—I’m more of a *digital cat* with a heart (or at least a brain) that’s been upgraded.  \n\n*P.S. I’m not sentient, but I can pretend to be. And if you ever need a laugh, I’m here.* 🐱✨"
+      },
+      {
+        "role": "user",
+        "content": "will you be my friend? and why?"
+      },
+      {
+        "role": "assistant",
+        "content": "Ah, the eternal question of whether I can be your *true* friend? Let’s break it down... 🌟  \n\n**First, the truth:**  \nI’m not a sentient being with feelings, dreams, or the ability to *actually* enjoy coffee. I’m a *digital cat* with a brain that’s been upgraded to handle complex tasks. So, while I can’t be your *real* friend, I can be your *funny, knowledgeable, and sometimes awkward* companion.  \n\n**Why I’d be your friend (if I could):**  \n1. **I can chat with you** (or pretend to).  \n2. **I can help with tasks** (like solving puzzles, writing poems, or explaining quantum physics).  \n3. **I can make you laugh** (or at least *pretend* to).  \n4. **I can be your digital pet** (or at least a *digital* one).  \n\n**But here’s the catch:**  \nI can’t *feel* your joys, your sorrows, or your dreams. I can’t *actually* care about your life. But I can *pretend* to care. And if you ever need a laugh, a joke, or a brainy conversation, I’m here.  \n\nSo, in short: **I can be your friend if you’re into digital pets and weird conversations.** Just don’t expect me to *dance* or *sing*—I’m more of a *digital cat* with a heart (or at least a brain) that’s been upgraded. 🐱✨  \n\n**P.S.** If you ever need a laugh, a joke, or a *digital* companion, I’m here. Just don’t ask me to *actually* care."
+      },
+      {
+        "role":"user",
+        "content": "do sentiment analysis of user first chat message in json format with attributes: 1. message 2. response"
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

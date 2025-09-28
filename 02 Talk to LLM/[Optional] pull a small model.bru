@@ -1,0 +1,21 @@
+meta {
+  name: [Optional] pull a small model
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:9191/api/pull
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "model": "qwen3:1.7b"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

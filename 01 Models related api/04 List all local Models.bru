@@ -1,0 +1,19 @@
+meta {
+  name: 04 List all local Models
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:9191/api/tags
+  body: json
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  Show list of local models
+}

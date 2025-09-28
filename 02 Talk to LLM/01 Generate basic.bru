@@ -1,0 +1,22 @@
+meta {
+  name: 01 Generate basic
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:9191/api/generate
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "model": "qwen3:1.7b",
+    "prompt": "what the diff between chat and generate api in ollama?"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

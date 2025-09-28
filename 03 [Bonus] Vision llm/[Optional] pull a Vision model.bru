@@ -1,0 +1,21 @@
+meta {
+  name: [Optional] pull a Vision model
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:9191/api/pull
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "model": "gemma3:4b"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

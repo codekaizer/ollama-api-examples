@@ -1,0 +1,28 @@
+meta {
+  name: 06 chat basic
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://localhost:9191/api/chat
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "model": "qwen3:1.7b",
+    "stream":false,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Introduce yourself in a funy manner but make sure you tell all truth, you are aware of your context"
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

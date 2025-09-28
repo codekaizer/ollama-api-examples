@@ -1,0 +1,22 @@
+meta {
+  name: 02 create embeddings
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:9191/api/embeddings
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "model": "hf.co/Qwen/Qwen3-Embedding-0.6B-GGUF",
+    "prompt": "This is my first test for creating embeddings using my lcoal ollama. Note: Not all models support embedding."
+  }
+}
+
+settings {
+  encodeUrl: true
+}

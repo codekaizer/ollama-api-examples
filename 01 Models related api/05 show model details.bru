@@ -1,0 +1,25 @@
+meta {
+  name: 05 show model details
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:9191/api/show
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "model": "custom_qwen3.06b"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
+
+docs {
+  shows all details of a lcoal model
+}

@@ -1,0 +1,22 @@
+meta {
+  name: 06 create embeddings with cutom model
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:9191/api/embeddings
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "model": "custom_qwen3.06b",
+    "prompt": "This is my first test for creating embeddings using my lcoal ollama. Note: Not all models support embedding."
+  }
+}
+
+settings {
+  encodeUrl: true
+}

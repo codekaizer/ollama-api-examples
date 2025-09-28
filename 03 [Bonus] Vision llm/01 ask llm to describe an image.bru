@@ -1,0 +1,25 @@
+meta {
+  name: 01 ask llm to describe an image 
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:9191/api/generate
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "model": "gemma3:4b",
+    "prompt": "describe this image",
+    "stream": false,
+    "images": ["{{imagebase}}"]
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

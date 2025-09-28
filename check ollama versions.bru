@@ -1,0 +1,22 @@
+meta {
+  name: check ollama versions
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:9191/api/version
+  body: none
+  auth: inherit
+}
+
+body:json {
+  {
+    "model": "qwen3:1.7b",
+    "prompt": "Ollama makes it easy to run LLMs locally."
+  }
+}
+
+settings {
+  encodeUrl: true
+}

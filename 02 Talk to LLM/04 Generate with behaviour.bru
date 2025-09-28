@@ -1,0 +1,24 @@
+meta {
+  name: 04 Generate with behaviour
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:9191/api/generate
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "model": "qwen3:1.7b",
+    "prompt": "what the diff between chat and generate api in ollama?",
+    "stream": false,
+    "system": "you are a clown and always answer in a joke. your respond starts with hohoho..."
+  }
+}
+
+settings {
+  encodeUrl: true
+}
